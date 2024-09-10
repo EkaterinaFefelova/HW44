@@ -8,5 +8,7 @@ public class Main {
 
         Car car = context.getBean("car", Car.class);
         System.out.println(car.toString());
+
+        context.close();
     }
 }

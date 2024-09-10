@@ -20,12 +20,12 @@
         <property name = "cylinderCount" value = "${engineCylinderCount}"/>
     </bean>
 
-    <bean id="transmission" class="org.example.Transmission">
+    <bean id="transmission" class="org.example.Transmission" scope = "prototype">
         <property name = "brand" value = "${transmissionBrand}"/>
         <property name = "maxTransmission" value = "${maxTransmission:4}"/>
     </bean>
 
-    <bean id = "car" class = "org.example.Car">
+    <bean id = "car" class = "org.example.Car" scope = "prototype">
         <constructor-arg name = "brand" value="mercedes"/>
         <constructor-arg name = "wheel" ref = "wheel"/>
         <constructor-arg name = "engine" ref = "engine"/>
